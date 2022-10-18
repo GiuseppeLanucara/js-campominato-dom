@@ -31,7 +31,7 @@ myBtn.addEventListener("click", function() {
     const Number = generatedNumbers[i];
     const Square = newSquare(Number);
     Square.addEventListener("click", numbeColorChange);
-
+    
     grid.append(Square);
 
 }})
