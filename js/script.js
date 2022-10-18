@@ -28,8 +28,7 @@ myBtn.addEventListener("click", function() {
 
     for (let i = 0; i < generatedNumbers.length; i++) {
 
-     const Number = generatedNumbers[i];
-
+    const Number = generatedNumbers[i];
     const Square = newSquare(Number);
     Square.addEventListener("click", numbeColorChange);
 
