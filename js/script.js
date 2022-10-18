@@ -73,5 +73,5 @@ function numbeColorChange() {
     const clickedNumber = (this.textContent);
         this.classList.add("green");
         console.log(this.textContent);
-        
+               
     }
