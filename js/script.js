@@ -11,7 +11,14 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
 
 const numbers = 100;
 const generatedNumbers = generateProgressiveNumber(numbers);
-const difficultLevel = document.getElementById("livelli")
+//Numeri Generati dal Computer (16)
+let pcNumbers = [];
+while(pcNumbers.length < 16){
+    let result = Math.floor(Math.random() * 100) + 1;
+    if(pcNumbers.indexOf(result) === -1) pcNumbers.push(result);
+}
+console.log(pcNumbers); 
+
 const myBtn = document.getElementById("mybtn");
 
 myBtn.addEventListener("click", function() {
@@ -66,4 +73,9 @@ function numbeColorChange() {
     const clickedNumber = (this.textContent);
         this.classList.add("green");
         console.log(this.textContent);
+        if (clickedNumber = pcNumbers[r]) {
+            this.classList.add("red");
+        } else {
+            this.classList.add("green")
+        }
     }
