@@ -11,15 +11,17 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
 
 const numbers = 100;
 const generatedNumbers = generateProgressiveNumber(numbers);
-//Numeri Generati dal Computer (16)
-let pcNumbers = [];
-while(pcNumbers.length < 16){
-    let result = Math.floor(Math.random() * 100) + 1;
-    if(pcNumbers.indexOf(result) === - 1) pcNumbers.push(result);
-}
+
 const myBtn = document.getElementById("mybtn");
 
 myBtn.addEventListener("click", function() {
+    //Numeri Generati dal Computer (16)
+    let pcNumbers = [];
+    while(pcNumbers.length < 16){
+        let result = Math.floor(Math.random() * 100) + 1;
+        if(pcNumbers.indexOf(result) === - 1) pcNumbers.push(result);
+    }
+    console.log(pcNumbers);
 
     let grid = document.querySelector(".grid").innerHTML ="";
     grid = document.querySelector(".grid");
@@ -32,6 +34,7 @@ myBtn.addEventListener("click", function() {
     Square.addEventListener("click", numbeColorChange);
 
     grid.append(Square);
+
 }})
 
 
